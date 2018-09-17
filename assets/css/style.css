@@ -30,7 +30,7 @@ body{
 
 #banner .inner h1{
     font-family: 'Anton', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     color: white;
     margin: 0;
     font-size: 5em;
@@ -38,24 +38,21 @@ body{
     animation: showup 15s;
 }
 
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
-}
-
 #banner .inner p{
     font-family: 'Raleway', sans-serif;
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 400;
+    animation: showup 30s;
 }
 
-.far{
+.head .fas{
     font-size: 4em;
     color: rgba(255, 255, 255, 0.75);
-    margin: 0 auto 1em auto;
+    margin: 1em auto 1em auto;
+    padding: 0 0.2em;
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.85);
 }
 
 .head a i:hover{
@@ -95,6 +92,13 @@ body{
 
 .box .image img{
     border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease-out;
+}
+
+.box .image img:hover{
+    backface-visibility: hidden;
+    transform: scale(0.95, 0.95);
+    opacity: 1;
 }
 
 .box .inner p{
@@ -179,4 +183,12 @@ ul.social li a:hover{
     font-size: 0.8em;
     color: gray;
     margin-bottom: 0;
+}
+
+/*animaciones*/
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
 }
