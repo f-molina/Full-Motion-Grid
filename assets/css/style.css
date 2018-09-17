@@ -126,6 +126,7 @@ body{
 
 .box .inner a button:hover{
     background: rgb(148, 215, 241);
+    cursor: pointer;
 }
 
 #footer{
@@ -192,3 +193,9 @@ ul.social li a:hover{
     80% {opacity:1;}
     100% {opacity:0;}
 }
+
+@media (max-width: 768px) {
+    .boxes{
+      grid-template-columns: none;
+    }
+  }
