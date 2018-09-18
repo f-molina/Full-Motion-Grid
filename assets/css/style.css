@@ -1,10 +1,17 @@
 :root {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
     margin: 0;
     background: #202024;
+}
+
+p, h2, h3{
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.65;
+    font-weight: 300;
 }
 
 #banner{
@@ -13,9 +20,10 @@ body{
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background-image: url(assets/vid/Broadwaycrew.jpg);
+    background-image: url('../vid/Broadwaycrew.jpg');
     background-size: cover;
-    height: 100vh;
+    position: relative;
+    height: 80vh;
 }
 
 #banner #video{
@@ -29,17 +37,16 @@ body{
 }
 
 #banner .inner h1{
-    font-family: 'Anton', sans-serif;
-    font-weight: 600;
+    font-family: "Passion One", cursive;
+    font-weight: 400;
     color: white;
-    margin: 0;
+    margin: 0.5em 0 0 0;
     font-size: 5em;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
     animation: showup 15s;
 }
 
 #banner .inner p{
-    font-family: 'Raleway', sans-serif;
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.5em;
     font-weight: 400;
@@ -49,7 +56,7 @@ body{
 .head .fas{
     font-size: 4em;
     color: rgba(255, 255, 255, 0.75);
-    margin: 1em auto 1em auto;
+    margin: 0;
     padding: 0 0.2em;
     border-radius: 100%;
     border: 1px solid rgba(255, 255, 255, 0.85);
@@ -60,11 +67,11 @@ body{
 }
 
 #main {
-    padding: 7em 0 4em 0;
+    padding: 4em 0 4em 0;
 }
 
 #main .inner{
-    width: 90%;
+    width: 83%;
     margin: 0 auto;
 }
 
@@ -80,6 +87,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 0.3em;   
 }
 
 .image img{
@@ -104,7 +112,6 @@ body{
 .box .inner p{
     font-size: 0.9em;
     color: grey;
-    font-family: 'Raleway', sans-serif;
 }
 
 .box .inner h3{
@@ -124,9 +131,17 @@ body{
     font-weight: 400;
 }
 
+.diff-color{
+    background-color: rgb(112, 199, 190);
+}
+
 .box .inner a button:hover{
     background: rgb(148, 215, 241);
     cursor: pointer;
+}
+
+.box .inner a .diff-color:hover{
+    background-color: rgb(137, 219, 211);
 }
 
 #footer{
@@ -143,14 +158,12 @@ body{
 #footer h2{
     font-size: 1.5em;
     color: white;
-    font-family: 'Raleway', sans-serif;
     margin-top: 0;
 }
 
 #footer p{
     font-size: 0.9em;
     color: rgb(231, 201, 201);
-    font-family: 'Raleway', sans-serif;
 }
 
 .social{
@@ -180,7 +193,6 @@ ul.social li a:hover{
 }
 
 #footer .copyright{
-    font-family: 'Raleway', sans-serif;
     font-size: 0.8em;
     color: gray;
     margin-bottom: 0;
@@ -197,5 +209,11 @@ ul.social li a:hover{
 @media (max-width: 768px) {
     .boxes{
       grid-template-columns: none;
+    }
+  }
+
+@media (max-width: 900px) {
+    #video{
+      visibility: hidden;
     }
   }
