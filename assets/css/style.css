@@ -212,7 +212,7 @@ ul.social li a:hover{
     }
   }
 
-@media (max-width: 900px) {
+@media (max-width: 1075px) {
     #video{
       visibility: hidden;
     }
